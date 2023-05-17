@@ -1,0 +1,49 @@
+<p id="Time" class="Time" style="color:lime;">Time: </p>
+<p id="date" class="date" style="color:lime; text-align:right; font-size:150%;"></p>
+<p id="math" class="math" style="color:lime; text-align: right;" >Math Goes Here</p>
+
+<p id="greeting" class="greet" style = "text-align:center; font-size:500%; color:lime;"> Hello: </p>
+
+<script>
+  const hour = new Date().getHours();
+  let greeting;
+  if (hour < 12){greeting = "Good Morning";
+  } else if (hour >= 19){
+    greeting = "Good Night";
+  }
+  else{
+    greeting = "Good Afternoon";
+  } 
+ document.getElementById("Time").innerHTML = greeting;
+</script>
+<script>
+  document.getElementById("greeting").innerHTML = "Welcome Jerry";
+</script>
+
+<script>
+  let x = 5;
+  let y = 2;
+  let z = x + y;
+ let text1 = "math is:"
+let result = z; //document.getElementById("math").innerHTML = result;
+  //alert (result);
+</script>
+<script>
+  const d = new Date();
+  document.getElementById("date").innerHTML = d;
+</script>
+<button class="Name" onClick="InputName()">Input Name</button>
+<p id="InputN"></p>
+<script> 
+  function InputName()
+  {
+    let text;
+    let person = prompt ("Please Input Name")
+    if (person == null || person != "Jerry" || person == ""){
+      text = "Not Correct";
+    } else {
+      text = "Hello " + person + "welcome back.";
+    }
+    document.getElementById("InputN").innerHTML = text;
+  }
+</script>
